@@ -5,6 +5,8 @@ project(calcHistgram)
 find_package(OpenCV REQUIRED)
 file(GLOB SOURCES "*.cpp" "*.c" "*.h" "*.hpp")
 
+set(CMAKE_CXX_STANDARD 11)
+
 if(OpenCV_FOUND)
 	add_executable(calcHistgram ${SOURCES})
 	include_directories(${OpenCV_INCLUDE_DIRS})
