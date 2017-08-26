@@ -10,7 +10,7 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_CLANGCXX)
 endif()
 
 if(OpenCV_FOUND)
-	add_executable(calcHistgram ${SOURCES})
 	include_directories(${OpenCV_INCLUDE_DIRS})
+	add_executable(calcHistgram ${SOURCES})
 	target_link_libraries(calcHistgram ${OpenCV_LIBS})
 endif(OpenCV_FOUND)
